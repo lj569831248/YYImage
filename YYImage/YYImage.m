@@ -223,6 +223,9 @@ static CGFloat _NSStringPathScale(NSString *string) {
 }
 
 - (NSUInteger)animatedImageLoopCount {
+    if (self.loopCount > 0) {
+        return self.loopCount;
+    }
     return _decoder.loopCount;
 }
 

@@ -80,6 +80,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) NSUInteger maxBufferSize;
 
+/**
+    动画结束的时候执行
+ */
+@property (nonatomic, copy) void(^endAnimation)();
+
 @end
 
 

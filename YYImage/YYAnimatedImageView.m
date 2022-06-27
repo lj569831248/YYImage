@@ -408,6 +408,9 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     [_requestQueue cancelAllOperations];
     _link.paused = YES;
     self.currentIsPlayingAnimation = NO;
+    if (self.endAnimation != nil) {
+        self.endAnimation();
+    }
 }
 
 - (void)startAnimating {
